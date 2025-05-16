@@ -2,119 +2,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jumbo Consulting</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: radial-gradient(circle at top left, rgba(102,204,255,0.15), transparent 60%),
-                  radial-gradient(circle at bottom right, rgba(102,204,255,0.1), transparent 60%),
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top left, rgba(102,204,255,0.2), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(102,204,255,0.15), transparent 60%),
                   #0e1117;
       color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: start;
-      overflow: hidden;
-    }
-
-    header {
-      padding-top: 20px;
       text-align: center;
+      padding: 2rem 1rem;
     }
 
     .logo {
       width: 64px;
-      height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
     }
 
     h1 {
-      font-size: 2.4rem;
-      margin: 0;
+      font-size: 2.2rem;
+      margin: 0.2rem;
     }
 
     p {
       color: #cbd5e1;
       font-size: 1.1rem;
-      margin: 10px 0 20px;
+      margin: 0.8rem 0 2rem;
     }
 
     .buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      margin-bottom: 2rem;
     }
 
     .buttons a {
-      background: #ffffff;
+      background: white;
       color: #0e1117;
-      text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
       padding: 10px 20px;
+      margin: 0 10px;
       border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    .buttons a:hover {
-      background: #d4d4d4;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .roles-title {
-      margin: 20px 0 10px;
       font-size: 1.4rem;
-      font-weight: bold;
+      margin-bottom: 1rem;
+      font-weight: 600;
     }
 
     .roles {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 10px;
-      padding: 0 1rem;
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      max-width: 900px;
+      margin: 0 auto 3rem;
     }
 
     .role {
-      background-color: #1f2937;
-      padding: 8px 10px;
-      border-radius: 6px;
+      background: #1f2937;
+      padding: 10px;
+      border-radius: 8px;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       border: 1px solid #374151;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .images img {
+      width: 320px;
+      max-width: 90vw;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
     footer {
-      margin-top: auto;
-      padding: 10px 0;
-      font-size: 0.8rem;
-      color: #94a3b8;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-top: 2rem;
     }
 
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      .buttons a { width: 100%; text-align: center; }
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      .buttons a { display: block; margin: 10px auto; }
+      .roles { grid-template-columns: 1fr 1fr; padding: 0 1rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Logo" class="logo">
-    <h1>We Hire. You Build.</h1>
-    <p>Quietly building bold teams for Seed to Series B startups.</p>
-    <div class="buttons">
-      <a href="mailto:support@jumbo.consulting">Email Us</a>
-      <a href="https://calendly.com/yogesh-jumbo/30min" target="_blank">Book a Call</a>
-    </div>
-    <div class="roles-title">Specialized In Hiring For Startups</div>
-  </header>
+  <img src="logo.png" alt="Jumbo Logo" class="logo" />
+  <h1>We Hire. You Build.</h1>
+  <p>Quietly building bold teams for Seed to Series B startups.</p>
+  <div class="buttons">
+    <a href="mailto:support@jumbo.consulting">Email Us</a>
+    <a href="https://calendly.com/yogesh-jumbo/30min" target="_blank">Book a Call</a>
+  </div>
+  <div class="roles-title">Specialized In Hiring For Startups</div>
   <div class="roles">
     <div class="role">CTO</div>
     <div class="role">Principal Engineer</div>
@@ -132,6 +127,10 @@
     <div class="role">Growth Marketer</div>
     <div class="role">Product Designers</div>
     <div class="role">Data Scientist</div>
+  </div>
+  <div class="images">
+    <img src="startup1.jpg" alt="Startup Workspace 1" />
+    <img src="startup2.jpg" alt="Startup Workspace 2" />
   </div>
   <footer>
     © 2025 Jumbo Consulting. All rights reserved.
