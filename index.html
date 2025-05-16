@@ -15,41 +15,55 @@
       color: #1a1a1a;
       overflow: hidden;
       height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: relative;
     }
 
     body::before {
       content: "";
       position: absolute;
-      top: -50%;
-      left: -50%;
+      top: 0;
+      left: 0;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
-      animation: spin 60s linear infinite;
+      background: url('https://www.transparenttextures.com/patterns/cloudy-day.png');
+      opacity: 0.15;
+      animation: moveBg 60s linear infinite;
       z-index: 0;
     }
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    @keyframes moveBg {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 180px;
+      background: url('https://svgshare.com/i/taU.svg') repeat-x;
+      animation: wave 20s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes wave {
+      0% { background-position-x: 0; }
+      100% { background-position-x: 1600px; }
     }
 
     .container {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       text-align: center;
       padding: 2rem;
       max-width: 1000px;
+      margin: 0 auto;
     }
 
     .logo {
       width: 120px;
-      height: 120px;
-      margin: 0 auto 2rem auto;
+      height: auto;
+      margin-bottom: 2rem;
       animation: float 3s ease-in-out infinite;
     }
 
@@ -62,20 +76,19 @@
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #1a1a1a;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
-      color: #222;
     }
 
     .cta {
       display: flex;
       gap: 1rem;
       justify-content: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
     }
 
     .cta a {
@@ -93,9 +106,9 @@
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .specialties {
@@ -139,5 +152,6 @@
       <div class="box">AEs</div>
     </div>
   </div>
+  <div class="wave"></div>
 </body>
 </html>
