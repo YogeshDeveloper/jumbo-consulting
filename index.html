@@ -1,87 +1,158 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jumbo Consulting</title>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0e0e10;
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
-  background-image:
-    radial-gradient(circle at top left, rgba(0, 153, 255, 0.1), transparent 60%),
-    radial-gradient(circle at bottom right, rgba(0, 153, 255, 0.1), transparent 60%);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-@media (max-width: 768px) {
-  body {
-    background-image:
-      radial-gradient(circle at 20% 20%, rgba(0, 153, 255, 0.15), transparent 60%),
-      radial-gradient(circle at 80% 80%, rgba(0, 153, 255, 0.15), transparent 60%);
-    background-attachment: fixed;
-    background-size: cover;
-  }
-
-  .roles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    justify-items: center;
-  }
-
-  .role {
-    width: 90%;
-    font-size: 14px;
-  }
-}
-</style></head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jumbo Consulting</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0e0e10;
+      color: #ffffff;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-image:
+        radial-gradient(circle at top left, rgba(0, 153, 255, 0.1), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(0, 153, 255, 0.1), transparent 60%);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .logo {
+      height: 80px;
+      margin-bottom: 2rem;
+      animation: fadeInLogo 1s ease-in-out;
+    }
+    @keyframes fadeInLogo {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #c9d1d9;
+      margin-bottom: 2rem;
+    }
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .cta a {
+      background: #ffffff;
+      color: #0d1117;
+      font-weight: 600;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255,255,255,0.15);
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+    }
+    .specialties {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+    .box {
+      background: #161b22;
+      color: #ffffff;
+      padding: 0.75rem 1.2rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      border: 1px solid #30363d;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .box:hover {
+      background: #21262d;
+      transform: scale(1.05);
+    }
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      margin: 3rem 0;
+    }
+    .image-gallery img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+    footer {
+      font-size: 0.85rem;
+      color: #999;
+      margin-top: auto;
+      padding: 1rem 0;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.25rem; }
+      .cta { flex-direction: column; gap: 0.75rem; }
+      .specialties { flex-direction: column; align-items: center; }
+      .box { width: 100%; max-width: 300px; }
+      .logo { height: 60px; }
+    }
+  </style>
+</head>
 <body>
-<img alt="Jumbo Consulting Logo" class="logo" src="logo.png"/>
-<h1>We Hire. You Build.</h1>
-<p>Quietly building bold teams for Seed to Series B startups.</p>
-<div class="cta">
-<a href="mailto:support@jumbo.consulting">Email Us</a>
-<a href="https://calendly.com/yogesh-jumbo/30min">Book a Call</a>
-</div>
-<h2>Specialized In Hiring For Startups</h2>
-<div class="specialties">
-<div class="box">CTO</div>
-<div class="box">Principal Engineer</div>
-<div class="box">Frontend Developer</div>
-<div class="box">Backend Developer</div>
-<div class="box">DevOps Engineer</div>
-<div class="box">AI Developer</div>
-<div class="box">Python Developer</div>
-<div class="box">ML Engineer</div>
-<div class="box">Webflow Developer</div>
-<div class="box">SDRs</div>
-<div class="box">SDR Manager</div>
-<div class="box">AEs</div>
-<div class="box">Head of Sales</div>
-<div class="box">Growth Marketer</div>
-<div class="box roles-grid">Product Designers</div>
-<div class="image-gallery">
-<img alt="Startup Workspace 1" src="487478554_1095787985909928_7621179747932340816_n.jpeg"/>
-<img alt="Startup Workspace 2" src="486855172_1095787862576607_6938411246408405382_n.jpeg"/>
-</div>
-</div>
-<div style="margin: 3rem 0; display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-<img alt="Startup Workspace 1" src="487478554_1095787985909928_7621179747932340816_n.jpeg" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 0 15px rgba(255,255,255,0.1);"/>
-<img alt="Startup Workspace 2" src="486855172_1095787862576607_6938411246408405382_n.jpeg" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 0 15px rgba(255,255,255,0.1);"/>
-</div>
-<footer>
+  <img src="logo.png" class="logo" alt="Jumbo Consulting Logo">
+  <h1>We Hire. You Build.</h1>
+  <p>Quietly building bold teams for Seed to Series B startups.</p>
+  <div class="cta">
+    <a href="mailto:support@jumbo.consulting">Email Us</a>
+    <a href="https://calendly.com/yogesh-jumbo/30min">Book a Call</a>
+  </div>
+  <h2>Specialized In Hiring For Startups</h2>
+  <div class="specialties">
+    <div class="box">CTO</div>
+    <div class="box">Principal Engineer</div>
+    <div class="box">Frontend Developer</div>
+    <div class="box">Backend Developer</div>
+    <div class="box">DevOps Engineer</div>
+    <div class="box">AI Developer</div>
+    <div class="box">Python Developer</div>
+    <div class="box">ML Engineer</div>
+    <div class="box">Webflow Developer</div>
+    <div class="box">SDRs</div>
+    <div class="box">SDR Manager</div>
+    <div class="box">AEs</div>
+    <div class="box">Head of Sales</div>
+    <div class="box">Growth Marketer</div>
+    <div class="box">Product Designers</div>
+    <div class="box">Data Scientist</div>
+  </div>
+  <div class="image-gallery">
+    <img src="487478554_1095787985909928_7621179747932340816_n.jpeg" alt="Startup Workspace 1">
+    <img src="486855172_1095787862576607_6938411246408405382_n.jpeg" alt="Startup Workspace 2">
+  </div>
+  <footer>
     © 2025 Jumbo Consulting. All rights reserved.
   </footer>
 </body>
