@@ -3,140 +3,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jumbo Consulting</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background: #66CCFF;
-      color: #1a1a1a;
-      overflow: hidden;
+      background: #0d1117;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
+      overflow: hidden;
+      padding: 2rem;
       position: relative;
     }
 
-    body::before {
-      content: "";
+    .gradient-bg {
       position: absolute;
+      width: 100%;
+      height: 100%;
       top: 0;
       left: 0;
-      width: 200%;
-      height: 200%;
-      background: url('https://www.transparenttextures.com/patterns/cloudy-day.png');
-      opacity: 0.15;
-      animation: moveBg 60s linear infinite;
+      background: radial-gradient(ellipse at top left, #66CCFF40, transparent),
+                  radial-gradient(ellipse at bottom right, #66CCFF20, transparent);
       z-index: 0;
-    }
-
-    @keyframes moveBg {
-      0% { background-position: 0 0; }
-      100% { background-position: 1000px 1000px; }
-    }
-
-    .wave {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 180px;
-      background: url('https://svgshare.com/i/taU.svg') repeat-x;
-      animation: wave 20s linear infinite;
-      z-index: 1;
-    }
-
-    @keyframes wave {
-      0% { background-position-x: 0; }
-      100% { background-position-x: 1600px; }
     }
 
     .container {
       position: relative;
-      z-index: 2;
+      z-index: 1;
+      max-width: 900px;
       text-align: center;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
     }
 
     .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 2rem;
-      animation: float 3s ease-in-out infinite;
+      height: 80px;
+      margin: 0 auto 2rem auto;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
       font-size: 3rem;
+      font-weight: 700;
       margin-bottom: 1rem;
+      color: #ffffff;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
+      color: #c9d1d9;
       margin-bottom: 2rem;
     }
 
     .cta {
       display: flex;
-      gap: 1rem;
       justify-content: center;
-      margin-bottom: 2rem;
+      gap: 1rem;
+      margin-bottom: 3rem;
       flex-wrap: wrap;
     }
 
     .cta a {
-      padding: 0.75rem 1.5rem;
-      background: #1a1a1a;
-      color: white;
-      text-decoration: none;
-      border-radius: 0.5rem;
+      background: #ffffff;
+      color: #0d1117;
       font-weight: 600;
-      transition: transform 0.3s ease;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .cta a:hover {
-      transform: scale(1.05);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
     }
 
     h2 {
-      font-size: 1.6rem;
-      font-weight: 700;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #ffffff;
       margin-bottom: 1.2rem;
     }
 
     .specialties {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
       justify-content: center;
     }
 
     .box {
-      background: white;
-      padding: 0.8rem 1.2rem;
-      border-radius: 0.75rem;
+      background: #161b22;
+      color: #ffffff;
+      padding: 0.75rem 1.2rem;
+      border-radius: 0.5rem;
       font-weight: 600;
-      color: #1a1a1a;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      border: 1px solid #30363d;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
 
     .box:hover {
-      background: #f0f0f0;
-      transform: translateY(-3px);
+      background: #21262d;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
+  <div class="gradient-bg"></div>
   <div class="container">
-    <img class="logo" src="logo.png" alt="Jumbo Consulting Logo" />
+    <img src="logo.png" class="logo" alt="Jumbo Consulting Logo">
     <h1>We Hire. You Build.</h1>
     <p>Quietly building bold teams for Seed to Series B startups.</p>
     <div class="cta">
@@ -152,6 +142,5 @@
       <div class="box">AEs</div>
     </div>
   </div>
-  <div class="wave"></div>
 </body>
 </html>
