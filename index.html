@@ -1,13 +1,14 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jumbo Consulting</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jumbo Consulting</title>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
@@ -99,35 +100,58 @@
       .logo { height: 60px; }
     }
   </style>
-</head>
+<style>
+@media (max-width: 768px) {
+  .roles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+  .roles-grid .role {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+  .image-gallery img {
+    width: 100%;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
+</style></head>
 <body>
-  <img src="logo.png" class="logo" alt="Jumbo Consulting Logo">
-  <h1>We Hire. You Build.</h1>
-  <p>Quietly building bold teams for Seed to Series B startups.</p>
-  <div class="cta">
-    <a href="mailto:support@jumbo.consulting">Email Us</a>
-    <a href="https://calendly.com/yogesh-jumbo/30min">Book a Call</a>
-  </div>
-  <h2>Specialized In Hiring For Startups</h2>
-  <div class="specialties">
-    <div class="box">CTO</div>
-    <div class="box">Principal Engineer</div>
-    <div class="box">Frontend Developer</div>
-    <div class="box">Backend Developer</div>
-    <div class="box">DevOps Engineer</div>
-    <div class="box">AI Developer</div>
-    <div class="box">Python Developer</div>
-    <div class="box">ML Engineer</div>
-    <div class="box">Webflow Developer</div>
-    <div class="box">SDRs</div>
-    <div class="box">SDR Manager</div>
-    <div class="box">AEs</div>
-    <div class="box">Head of Sales</div>
-    <div class="box">Growth Marketer</div>
-    <div class="box">Product Designers</div>
-    <div class="box">Data Scientist</div>
-  </div>
-  <footer>
+<img alt="Jumbo Consulting Logo" class="logo" src="logo.png"/>
+<h1>We Hire. You Build.</h1>
+<p>Quietly building bold teams for Seed to Series B startups.</p>
+<div class="cta">
+<a href="mailto:support@jumbo.consulting">Email Us</a>
+<a href="https://calendly.com/yogesh-jumbo/30min">Book a Call</a>
+</div>
+<h2>Specialized In Hiring For Startups</h2>
+<div class="specialties">
+<div class="box">CTO</div>
+<div class="box">Principal Engineer</div>
+<div class="box">Frontend Developer</div>
+<div class="box">Backend Developer</div>
+<div class="box">DevOps Engineer</div>
+<div class="box">AI Developer</div>
+<div class="box">Python Developer</div>
+<div class="box">ML Engineer</div>
+<div class="box">Webflow Developer</div>
+<div class="box">SDRs</div>
+<div class="box">SDR Manager</div>
+<div class="box">AEs</div>
+<div class="box">Head of Sales</div>
+<div class="box">Growth Marketer</div>
+<div class="box roles-grid">Product Designers</div>
+<div class="box image-gallery">Data Scientist</div>
+</div>
+<div style="margin: 3rem 0; display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+<img alt="Startup Workspace 1" src="487478554_1095787985909928_7621179747932340816_n.jpeg" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 0 15px rgba(255,255,255,0.1);">
+<img alt="Startup Workspace 2" src="486855172_1095787862576607_6938411246408405382_n.jpeg" style="max-width: 100%; border-radius: 1rem; box-shadow: 0 0 15px rgba(255,255,255,0.1);"/>
+</img></div>
+<footer>
     © 2025 Jumbo Consulting. All rights reserved.
   </footer>
 </body>
