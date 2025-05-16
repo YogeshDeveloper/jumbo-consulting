@@ -1,132 +1,161 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jumbo Consulting</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top left, rgba(102,204,255,0.12), transparent 60%),
-                  radial-gradient(circle at bottom right, rgba(102,204,255,0.08), transparent 60%),
-                  #0e1117;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .screen {
-      max-width: 1100px;
-      width: 100%;
-      height: 95vh;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      box-sizing: border-box;
-      text-align: center;
-    }
-
-    .logo {
-      width: 64px;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      font-size: 2.4rem;
-      margin: 0.2rem;
-    }
-
-    p {
-      color: #cbd5e1;
-      font-size: 1.1rem;
-      margin: 0.5rem 0 1.2rem;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .buttons a {
-      text-decoration: none;
-      background: white;
-      color: #0e1117;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
-    .roles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px;
-      width: 100%;
-      max-width: 700px;
-      margin-bottom: 1rem;
-    }
-
-    .role {
-      background: #1f2937;
-      padding: 10px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 0.9rem;
-      border: 1px solid #374151;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .images {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .images img {
-      height: 100px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-      object-fit: cover;
-    }
-
-    footer {
-      font-size: 0.8rem;
-      color: #94a3b8;
-      margin-top: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 1.8rem; }
-      .roles { grid-template-columns: repeat(2, 1fr); }
-      .images img {
-        height: 80px;
-        width: 45%;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jumbo Consulting</title>
+    <link rel="icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-dark: #0f1117;
+        --text: #ffffff;
+        --accent: #66ccff;
+        --card-bg: #1a1d24;
+        --border: #333;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="screen">
-    <div>
-      <img src="logo.png" alt="Jumbo Logo" class="logo" />
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--bg-dark);
+        color: var(--text);
+        min-height: 100vh;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        padding: 2rem 1rem;
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        height: 60px;
+        margin-bottom: 1.5rem;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #ccc;
+        margin: 1rem 0 2rem;
+        text-align: center;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .buttons a {
+        background: #fff;
+        color: #000;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .roles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      .role {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+      }
+
+      .images {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .images img {
+        width: 300px;
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.875rem;
+        color: #777;
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2rem;
+        }
+        .buttons {
+          flex-direction: column;
+        }
+        .images img {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.png" alt="Jumbo Consulting Logo" class="logo" />
       <h1>We Hire. You Build.</h1>
       <p>Quietly building bold teams for Seed to Series B startups.</p>
       <div class="buttons">
         <a href="mailto:support@jumbo.consulting">Email Us</a>
         <a href="https://calendly.com/yogesh-jumbo/30min" target="_blank">Book a Call</a>
       </div>
+      <h2>Specialized In Hiring For Startups</h2>
       <div class="roles">
         <div class="role">CTO</div>
         <div class="role">ML Engineer</div>
@@ -138,11 +167,10 @@
         <div class="role">Growth Marketers</div>
       </div>
       <div class="images">
-        <img src="startup1.jpg" alt="Workspace 1" />
-        <img src="startup2.jpg" alt="Workspace 2" />
+        <img src="startup1.jpg" alt="Startup Workspace 1" />
+        <img src="startup2.jpg" alt="Startup Workspace 2" />
       </div>
+      <footer>&copy; 2025 Jumbo Consulting. All rights reserved.</footer>
     </div>
-    <footer>© 2025 Jumbo Consulting. All rights reserved.</footer>
-  </div>
-</body>
+  </body>
 </html>
